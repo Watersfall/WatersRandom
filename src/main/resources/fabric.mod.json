@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "watersrandom",
+	"version": "${version}",
+	"name": "Waters Random",
+	"description": "Adds random things, port of Weiss Random",
+	"authors": ["Watersfall", "weissmoon(Original)"],
+	"contact": {},
+	"license": "LGPL-3.0",
+	"icon": "assets/watersrandom/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": ["net.watersfall.random.client.WatersRandomClient"],
+		"main": ["net.watersfall.random.WatersRandom"]
+	},
+	"mixins": [
+		"random.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.12.1",
+		"minecraft": "1.17.1"
+	}
+}
