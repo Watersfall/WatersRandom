@@ -1,0 +1,12 @@
+{
+	"required_mod": "tools",
+	"type": "tools:tool_recipe",
+	"inputs": [
+		"watersrandom:dagger_blade",
+		"tools:tool_binding",
+		"tools:tool_handle"
+	],
+	"output": "watersrandom:forged_dagger",
+	"damage": 1,
+	"speed": -1
+}

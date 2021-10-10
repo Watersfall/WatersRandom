@@ -1,11 +1,11 @@
 package net.watersfall.random;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Identifier;
-import net.watersfall.random.registry.RandomBlockEntities;
-import net.watersfall.random.registry.RandomBlocks;
-import net.watersfall.random.registry.RandomItems;
-import net.watersfall.random.registry.RandomScreenHandlers;
+import net.watersfall.random.compat.tools.ToolsCompat;
+import net.watersfall.random.registry.*;
 
 public class WatersRandom implements ModInitializer
 {
@@ -23,5 +23,6 @@ public class WatersRandom implements ModInitializer
 		RandomItems.register();
 		RandomBlockEntities.register();
 		RandomScreenHandlers.register();
+		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));
 	}
 }

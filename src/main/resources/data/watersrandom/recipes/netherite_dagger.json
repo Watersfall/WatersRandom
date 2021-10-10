@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "watersrandom:diamond_dagger"
+	},
+	"addition": {
+		"tag": "c:netherite_ingots"
+	},
+	"result": {
+		"item": "watersrandom:netherite_dagger"
+	}
+}

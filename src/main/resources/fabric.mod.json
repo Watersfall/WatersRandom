@@ -18,6 +18,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.12.1",
-		"minecraft": "1.17.1"
+		"minecraft": "1.17.1",
+		"wet": ">=1.0.0",
+		"fabric": ">=0.40.6"
 	}
 }

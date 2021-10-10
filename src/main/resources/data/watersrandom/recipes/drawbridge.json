@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ibi",
+		"psr",
+		"ibi"
+	],
+	"key": {
+		"i": {
+			"tag": "c:iron_ingots"
+		},
+		"b": {
+			"tag": "c:gold_ingots"
+		},
+		"p": {
+			"item": "minecraft:piston"
+		},
+		"s": {
+			"item": "minecraft:sticky_piston"
+		},
+		"r": {
+			"tag": "c:redstone_dusts"
+		}
+	},
+	"result": {
+		"item": "watersrandom:drawbridge"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"m",
+		"s"
+	],
+	"key": {
+		"m": {
+			"tag": "minecraft:planks"
+		},
+		"s": {
+			"tag": "c:wood_sticks"
+		}
+	},
+	"result": {
+		"item": "watersrandom:wood_dagger"
+	}
+}

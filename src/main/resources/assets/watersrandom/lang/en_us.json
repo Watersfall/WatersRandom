@@ -1,3 +1,12 @@
 {
-	"block.watersrandom.drawbridge": "Drawbridge"
+	"block.watersrandom.drawbridge": "Drawbridge",
+
+	"item.watersrandom.wood_dagger": "Wooden Dagger",
+	"item.watersrandom.stone_dagger": "Stone Dagger",
+	"item.watersrandom.iron_dagger": "Iron Dagger",
+	"item.watersrandom.gold_dagger": "Golden Dagger",
+	"item.watersrandom.diamond_dagger": "Diamond Dagger",
+	"item.watersrandom.netherite_dagger": "Netherite Dagger",
+	"item.watersrandom.dagger": "%s Dagger",
+	"item.watersrandom.dagger_blade": "%s Dagger Blade"
 }
