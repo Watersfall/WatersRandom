@@ -1,5 +1,9 @@
 {
 	"block.watersrandom.drawbridge": "Drawbridge",
+	"block.watersrandom.charcoal_block": "Charcoal Block",
+
+	"item.watersrandom.charcoal_piece": "Charcoal Piece",
+	"item.watersrandom.coal_piece": "Coal Piece",
 
 	"item.watersrandom.wood_dagger": "Wooden Dagger",
 	"item.watersrandom.stone_dagger": "Stone Dagger",

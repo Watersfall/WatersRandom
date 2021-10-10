@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		},
+		{
+			"item": "watersrandom:charcoal_piece"
+		}
+	],
+	"result": {
+		"item": "minecraft:charcoal"
+	}
+}

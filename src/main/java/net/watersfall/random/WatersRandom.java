@@ -1,7 +1,6 @@
 package net.watersfall.random;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Identifier;
 import net.watersfall.random.compat.tools.ToolsCompat;

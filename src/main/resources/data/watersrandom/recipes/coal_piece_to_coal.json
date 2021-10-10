@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		},
+		{
+			"item": "watersrandom:coal_piece"
+		}
+	],
+	"result": {
+		"item": "minecraft:coal"
+	}
+}
