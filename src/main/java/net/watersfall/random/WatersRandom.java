@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Identifier;
 import net.watersfall.random.compat.tools.ToolsCompat;
+import net.watersfall.random.item.RailgunItem;
 import net.watersfall.random.registry.*;
 
 public class WatersRandom implements ModInitializer
@@ -22,6 +23,8 @@ public class WatersRandom implements ModInitializer
 		RandomItems.register();
 		RandomBlockEntities.register();
 		RandomScreenHandlers.register();
+		RandomEntities.register();
+		RailgunItem.registerAmmo();
 		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));
 	}
 }

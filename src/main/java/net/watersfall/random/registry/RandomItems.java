@@ -7,6 +7,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.item.DaggerItem;
+import net.watersfall.random.item.RailgunItem;
 import net.watersfall.tools.item.ForgedSwordItem;
 
 public class RandomItems
@@ -23,6 +24,8 @@ public class RandomItems
 	public static SwordItem GOLD_DAGGER;
 	public static SwordItem DIAMOND_DAGGER;
 	public static SwordItem NETHERITE_DAGGER;
+
+	public static RailgunItem RAILGUN;
 
 	private static BlockItem register(Block block, ItemGroup group)
 	{
@@ -51,6 +54,7 @@ public class RandomItems
 		GOLD_DAGGER = register("gold_dagger", ToolMaterials.GOLD);
 		DIAMOND_DAGGER = register("diamond_dagger", ToolMaterials.DIAMOND);
 		NETHERITE_DAGGER = register("netherite_dagger", ToolMaterials.NETHERITE);
+		RAILGUN = register("railgun", new RailgunItem(new FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT)));
 
 		FuelRegistry.INSTANCE.add(COAL_PIECE, 200);
 		FuelRegistry.INSTANCE.add(CHARCOAL_PIECE, 200);

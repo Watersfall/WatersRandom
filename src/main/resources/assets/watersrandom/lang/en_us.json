@@ -12,5 +12,13 @@
 	"item.watersrandom.diamond_dagger": "Diamond Dagger",
 	"item.watersrandom.netherite_dagger": "Netherite Dagger",
 	"item.watersrandom.dagger": "%s Dagger",
-	"item.watersrandom.dagger_blade": "%s Dagger Blade"
+	"item.watersrandom.dagger_blade": "%s Dagger Blade",
+
+	"item.watersrandom.railgun": "Railgun",
+	"item.watersrandom.railgun.current_ammo": "Current Ammo: ",
+	"item.watersrandom.railgun.current_ammo.none": " None",
+	"item.watersrandom.railgun.valid_ammo": "Valid Ammo: ",
+	"item.watersrandom.railgun.valid_ammo.press_shift": "[Shift]",
+	"item.watersrandom.railgun.ammo": "Railgun Ammo",
+	"item.watersrandom.railgun.ammo.damage": " Damage: %s"
 }
