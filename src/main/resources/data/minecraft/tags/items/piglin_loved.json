@@ -1,0 +1,15 @@
+{
+	"replace": "false",
+	"values": [
+		"watersrandom:gilded_helmet",
+		"watersrandom:gilded_chestplate",
+		"watersrandom:gilded_leggings",
+		"watersrandom:gilded_boots",
+		"watersrandom:gilded_pickaxe",
+		"watersrandom:gilded_axe",
+		"watersrandom:gilded_sword",
+		"watersrandom:gilded_hoe",
+		"watersrandom:gilded_shovel",
+		"watersrandom:gilded_dagger"
+	]
+}

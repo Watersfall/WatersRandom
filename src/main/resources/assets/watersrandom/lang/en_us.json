@@ -20,5 +20,19 @@
 	"item.watersrandom.railgun.valid_ammo": "Valid Ammo: ",
 	"item.watersrandom.railgun.valid_ammo.press_shift": "[Shift]",
 	"item.watersrandom.railgun.ammo": "Railgun Ammo",
-	"item.watersrandom.railgun.ammo.damage": " Damage: %s"
+	"item.watersrandom.railgun.ammo.damage": " Damage: %s",
+
+	"item.watersrandom.gilded_sword": "Gilded Sword",
+	"item.watersrandom.gilded_pickaxe": "Gilded Pickaxe",
+	"item.watersrandom.gilded_axe": "Gilded Axe",
+	"item.watersrandom.gilded_hoe": "Gilded Hoe",
+	"item.watersrandom.gilded_shovel": "Gilded Shovel",
+	"item.watersrandom.gilded_dagger": "Gilded Dagger",
+	"item.watersrandom.gilded_helmet": "Gilded Helmet",
+	"item.watersrandom.gilded_chestplate": "Gilded Chestplate",
+	"item.watersrandom.gilded_leggings": "Gilded Leggings",
+	"item.watersrandom.gilded_boots": "Gilded Boots",
+
+	"item.watersrandom.wood_helmet": "%s Helmet",
+	"item.watersrandom.wood_boots": "%s Boots"
 }

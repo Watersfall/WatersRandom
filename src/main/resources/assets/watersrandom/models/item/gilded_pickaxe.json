@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "watersrandom:item/gilded_pickaxe"
+	}
+}

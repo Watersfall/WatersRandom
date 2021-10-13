@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "minecraft:iron_hoe"
+	},
+	"addition": {
+		"tag": "c:gold_ingots"
+	},
+	"result": {
+		"item": "watersrandom:gilded_hoe"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"type": "watersrandom:wood_armor",
+	"pattern": [
+		"LLL",
+		"L L"
+	],
+	"key": {
+		"L": {
+			"tag": "minecraft:logs"
+		}
+	},
+	"result": {
+		"item": "watersrandom:wood_helmet"
+	}
+}
