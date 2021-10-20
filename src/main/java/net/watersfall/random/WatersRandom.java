@@ -1,9 +1,16 @@
 package net.watersfall.random;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.event.registry.ItemConstructedCallback;
+import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.fabricmc.fabric.api.tag.TagFactory;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.MobSpawnerBlockEntity;
 import net.minecraft.item.Item;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
@@ -12,6 +19,7 @@ import net.watersfall.random.api.ability.WoodArmorAbility;
 import net.watersfall.random.compat.tools.ToolsCompat;
 import net.watersfall.random.item.RailgunItem;
 import net.watersfall.random.item.WoodArmorItem;
+import net.watersfall.random.mixin.accessor.MobSpawnerLogicAccessor;
 import net.watersfall.random.registry.*;
 import net.watersfall.wet.api.abilities.AbilityProvider;
 import net.watersfall.wet.api.event.AbilityCreateEvent;
@@ -38,6 +46,23 @@ public class WatersRandom implements ModInitializer
 		}));
 	}
 
+	private void registerEvents()
+	{
+		PlayerBlockBreakEvents.AFTER.register(((world, player, pos, state, test) -> {
+			if(!world.isClient)
+			{
+				if(state.isOf(Blocks.SPAWNER))
+				{
+					if(test instanceof MobSpawnerBlockEntity spawner)
+					{
+						((MobSpawnerLogicAccessor)spawner.getLogic()).setSpawnDelay(0);
+						spawner.getLogic().serverTick((ServerWorld)world, pos);
+					}
+				}
+			}
+		}));
+	}
+
 	@Override
 	public void onInitialize()
 	{
@@ -49,6 +74,7 @@ public class WatersRandom implements ModInitializer
 		RandomRecipes.register();
 		RailgunItem.registerAmmo();
 		registerAbilities();
+		registerEvents();
 		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));
 	}
 }
