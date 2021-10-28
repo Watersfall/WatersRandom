@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"powered=false": {
+			"model": "watersrandom:block/mossy_pressure_plate"
+		},
+		"powered=true": {
+			"model": "watersrandom:block/mossy_pressure_plate_down"
+		}
+	}
+}

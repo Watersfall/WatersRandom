@@ -1,27 +1,27 @@
 {
-  "variants": {
-      "facing=north": {
-        "model": "watersrandom:block/drawbridge"
-      },
-      "facing=south": {
-        "model": "watersrandom:block/drawbridge",
-        "y": 180
-      },
-      "facing=west": {
-        "model": "watersrandom:block/drawbridge",
-        "y": 270
-      },
-      "facing=down": {
-        "model": "watersrandom:block/drawbridge",
-        "x": 90
-      },
-      "facing=up": {
-        "model": "watersrandom:block/drawbridge",
-        "x": 270
-      },
-      "facing=east": {
-        "model": "watersrandom:block/drawbridge",
-        "y": 90
-      }
-  }
+	"variants": {
+		"facing=north": {
+			"model": "watersrandom:block/drawbridge"
+		},
+		"facing=south": {
+			"model": "watersrandom:block/drawbridge",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "watersrandom:block/drawbridge",
+			"y": 270
+		},
+		"facing=down": {
+			"model": "watersrandom:block/drawbridge",
+			"x": 90
+		},
+		"facing=up": {
+			"model": "watersrandom:block/drawbridge",
+			"x": 270
+		},
+		"facing=east": {
+			"model": "watersrandom:block/drawbridge",
+			"y": 90
+		}
+	}
 }

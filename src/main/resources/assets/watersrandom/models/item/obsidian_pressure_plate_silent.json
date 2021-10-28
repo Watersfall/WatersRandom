@@ -1,0 +1,6 @@
+{
+	"parent": "watersrandom:item/silent_pressure_plate",
+	"textures": {
+		"texture": "minecraft:block/obsidian"
+	}
+}

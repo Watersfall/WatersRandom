@@ -22,6 +22,15 @@ public class RandomItems
 {
 	public static BlockItem DRAWBRIDGE;
 	public static BlockItem CHARCOAL_BLOCK;
+	
+	public static BlockItem MOSSY_PRESSURE_PLATE;
+	public static BlockItem MOSSY_PRESSURE_PLATE_SILENT;
+	public static BlockItem MOSSY_PRESSURE_PLATE_INVISIBLE;
+	public static BlockItem MOSSY_PRESSURE_PLATE_SILENT_INVISIBLE;
+	public static BlockItem OBSIDIAN_PRESSURE_PLATE;
+	public static BlockItem OBSIDIAN_PRESSURE_PLATE_SILENT;
+	public static BlockItem OBSIDIAN_PRESSURE_PLATE_INVISIBLE;
+	public static BlockItem OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
 
 	public static Item COAL_PIECE;
 	public static Item CHARCOAL_PIECE;
@@ -84,6 +93,14 @@ public class RandomItems
 	{
 		DRAWBRIDGE = register(RandomBlocks.DRAWBRIDGE, ItemGroup.REDSTONE);
 		CHARCOAL_BLOCK = register(RandomBlocks.CHARCOAL_BLOCK, ItemGroup.BUILDING_BLOCKS);
+		MOSSY_PRESSURE_PLATE = register(RandomBlocks.MOSSY_PRESSURE_PLATE, ItemGroup.REDSTONE);
+		MOSSY_PRESSURE_PLATE_SILENT = register(RandomBlocks.MOSSY_PRESSURE_PLATE_SILENT, ItemGroup.REDSTONE);
+		MOSSY_PRESSURE_PLATE_INVISIBLE = register(RandomBlocks.MOSSY_PRESSURE_PLATE_INVISIBLE, ItemGroup.REDSTONE);
+		MOSSY_PRESSURE_PLATE_SILENT_INVISIBLE = register(RandomBlocks.MOSSY_PRESSURE_PLATE_SILENT_INVISIBLE, ItemGroup.REDSTONE);
+		OBSIDIAN_PRESSURE_PLATE = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE, ItemGroup.REDSTONE);
+		OBSIDIAN_PRESSURE_PLATE_SILENT = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_SILENT, ItemGroup.REDSTONE);
+		OBSIDIAN_PRESSURE_PLATE_INVISIBLE = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_INVISIBLE, ItemGroup.REDSTONE);
+		OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE, ItemGroup.REDSTONE);
 		COAL_PIECE = register("coal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));
 		CHARCOAL_PIECE = register("charcoal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));
 		WOOD_DAGGER = register("wood_dagger", ToolMaterials.WOOD);

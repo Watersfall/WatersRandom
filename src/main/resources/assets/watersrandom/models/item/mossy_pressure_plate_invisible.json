@@ -1,0 +1,6 @@
+{
+	"parent": "watersrandom:item/invisible_pressure_plate",
+	"textures": {
+		"texture": "minecraft:block/mossy_cobblestone"
+	}
+}
