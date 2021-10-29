@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"OO"
+	],
+	"key": {
+		"O": {
+			"item": "minecraft:obsidian"
+		}
+	},
+	"result": {
+		"item": "watersrandom:obsidian_pressure_plate"
+	}
+}

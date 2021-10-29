@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"W",
+		"O"
+	],
+	"key": {
+		"O": {
+			"item": "watersrandom:mossy_pressure_plate"
+		},
+		"W": {
+			"item": "minecraft:glass"
+		}
+	},
+	"result": {
+		"item": "watersrandom:mossy_pressure_plate_invisible"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"OO"
+	],
+	"key": {
+		"O": {
+			"item": "minecraft:mossy_cobblestone"
+		}
+	},
+	"result": {
+		"item": "watersrandom:mossy_pressure_plate"
+	}
+}
