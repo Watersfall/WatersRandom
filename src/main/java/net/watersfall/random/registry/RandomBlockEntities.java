@@ -8,14 +8,17 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.block.entity.DrawbridgeBlockEntity;
+import net.watersfall.random.block.entity.TinyChestBlockEntity;
 
 public class RandomBlockEntities
 {
 	public static BlockEntityType<DrawbridgeBlockEntity> DRAWBRIDGE;
+	public static BlockEntityType<TinyChestBlockEntity> TINY_CHEST;
 
 	public static void register()
 	{
 		DRAWBRIDGE = register("drawbridge", DrawbridgeBlockEntity::new, RandomBlocks.DRAWBRIDGE);
+		TINY_CHEST = register("tiny_chest", TinyChestBlockEntity::new, RandomBlocks.TINY_CHEST);
 	}
 
 	private static <T extends BlockEntity> BlockEntityType<T> register(String id, FabricBlockEntityTypeBuilder.Factory<T> factory, Block... blocks)

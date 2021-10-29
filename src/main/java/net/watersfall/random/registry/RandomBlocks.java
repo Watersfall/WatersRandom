@@ -9,6 +9,7 @@ import net.watersfall.random.WatersRandom;
 import net.watersfall.random.block.DrawbridgeBlock;
 import net.watersfall.random.block.MossyCobblestonePressurePlate;
 import net.watersfall.random.block.ObsidianPressurePlate;
+import net.watersfall.random.block.TinyChestBlock;
 
 public class RandomBlocks
 {
@@ -22,6 +23,7 @@ public class RandomBlocks
 	public static ObsidianPressurePlate OBSIDIAN_PRESSURE_PLATE_SILENT;
 	public static ObsidianPressurePlate OBSIDIAN_PRESSURE_PLATE_INVISIBLE;
 	public static ObsidianPressurePlate OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
+	public static TinyChestBlock TINY_CHEST;
 
 
 	private static <T extends Block> T register(String name, T block)
@@ -41,5 +43,6 @@ public class RandomBlocks
 		OBSIDIAN_PRESSURE_PLATE_SILENT = register("obsidian_pressure_plate_silent", new ObsidianPressurePlate(true, true, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
 		OBSIDIAN_PRESSURE_PLATE_INVISIBLE = register("obsidian_pressure_plate_invisible", new ObsidianPressurePlate(false, false, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
 		OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE = register("obsidian_pressure_plate_silent_invisible", new ObsidianPressurePlate(true, false, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
+		TINY_CHEST = register("tiny_chest", new TinyChestBlock(FabricBlockSettings.copyOf(Blocks.CHEST)));
 	}
 }

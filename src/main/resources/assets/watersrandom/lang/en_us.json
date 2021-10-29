@@ -2,6 +2,17 @@
 	"block.watersrandom.drawbridge": "Drawbridge",
 	"block.watersrandom.charcoal_block": "Charcoal Block",
 
+	"block.watersrandom.obsidian_pressure_plate": "Obsidian Pressure Plate ▶ ■",
+	"block.watersrandom.obsidian_pressure_plate_silent": "Obsidian Pressure Plate ▷ ■",
+	"block.watersrandom.obsidian_pressure_plate_invisible": "Obsidian Pressure Plate ▶ □",
+	"block.watersrandom.obsidian_pressure_plate_silent_invisible": "Obsidian Pressure Plate ▷ □",
+	"block.watersrandom.mossy_pressure_plate": "Mossy Pressure Plate ▶ ■",
+	"block.watersrandom.mossy_pressure_plate_silent": "Mossy Pressure Plate ▷ ■",
+	"block.watersrandom.mossy_pressure_plate_invisible": "Mossy Pressure Plate ▶ □",
+	"block.watersrandom.mossy_pressure_plate_silent_invisible": "Mossy Pressure Plate ▷ □",
+
+	"block.watersrandom.tiny_chest": "Tiny Chest",
+
 	"item.watersrandom.charcoal_piece": "Charcoal Piece",
 	"item.watersrandom.coal_piece": "Coal Piece",
 
@@ -34,5 +45,8 @@
 	"item.watersrandom.gilded_boots": "Gilded Boots",
 
 	"item.watersrandom.wood_helmet": "%s Helmet",
-	"item.watersrandom.wood_boots": "%s Boots"
+	"item.watersrandom.wood_boots": "%s Boots",
+
+	"advancement.watersrandom.envy": "Envy",
+	"advancement.watersrandom.envy.desc": "Jealousy"
 }

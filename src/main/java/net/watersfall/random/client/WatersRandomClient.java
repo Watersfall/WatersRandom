@@ -6,10 +6,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.*;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
@@ -31,13 +28,17 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.api.ability.WoodArmorAbility;
+import net.watersfall.random.block.entity.TinyChestBlockEntity;
 import net.watersfall.random.client.gui.DrawbridgeScreen;
+import net.watersfall.random.client.gui.TinyChestScreen;
 import net.watersfall.random.client.renderer.block.DrawbridgeBlockRenderer;
+import net.watersfall.random.client.renderer.block.TinyChestBlockRenderer;
 import net.watersfall.random.client.renderer.entity.RailgunBulletEntityRenderer;
 import net.watersfall.random.compat.tools.ToolsCompat;
 import net.watersfall.random.entity.RailgunBulletEntity;
@@ -64,7 +65,9 @@ public class WatersRandomClient implements ClientModInitializer
 	{
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RandomBlocks.DRAWBRIDGE);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.DRAWBRIDGE, DrawbridgeBlockRenderer::new);
+		BlockEntityRendererRegistry.register(RandomBlockEntities.TINY_CHEST, TinyChestBlockRenderer::new);
 		ScreenRegistry.register(RandomScreenHandlers.DRAWBRIDGE, DrawbridgeScreen::new);
+		ScreenRegistry.register(RandomScreenHandlers.TINY_CHEST, TinyChestScreen::new);
 
 		ToolsCompat.INSTANCE.loadClient(FabricLoader.getInstance().isModLoaded("tools"));
 
@@ -168,5 +171,15 @@ public class WatersRandomClient implements ClientModInitializer
 				client.world.addEntity(id, entity);
 			});
 		});
+
+		BuiltinItemRendererRegistry.INSTANCE.register(RandomItems.TINY_CHEST, ((stack, mode, matrices, vertexConsumers, light, overlay) -> {
+			MinecraftClient.getInstance().getBlockEntityRenderDispatcher().renderEntity(
+					new TinyChestBlockEntity(BlockPos.ORIGIN, RandomBlocks.TINY_CHEST.getDefaultState()),
+					matrices,
+					vertexConsumers,
+					light,
+					overlay
+			);
+		}));
 	}
 }

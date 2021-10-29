@@ -1,0 +1,44 @@
+{
+	"display": {
+		"icon": {
+			"item": "watersrandom:tiny_chest"
+		},
+		"title": {
+			"translate": "advancement.watersrandom.envy"
+		},
+		"description": {
+			"translate": "advancement.watersrandom.envy.desc"
+		},
+		"background": "watersrandom:textures/block/charcoal_block.png",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"criteria": {
+		"big_tiny_chest": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": {
+					"block": {
+						"blocks": [
+							"watersrandom:tiny_chest"
+						],
+						"state": {
+							"tiny": true
+						}
+					}
+				},
+				"item": {
+					"items": [
+						"minecraft:nether_star"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"big_tiny_chest"
+		]
+	]
+}
