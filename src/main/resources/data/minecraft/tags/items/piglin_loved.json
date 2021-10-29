@@ -1,6 +1,7 @@
 {
 	"replace": "false",
 	"values": [
+		"watersrandom:drawbridge",
 		"watersrandom:gilded_helmet",
 		"watersrandom:gilded_chestplate",
 		"watersrandom:gilded_leggings",

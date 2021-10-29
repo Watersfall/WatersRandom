@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"watersrandom:mossy_pressure_plate",
+		"watersrandom:mossy_pressure_plate_silent",
+		"watersrandom:mossy_pressure_plate_invisible",
+		"watersrandom:mossy_pressure_plate_silent_invisible"
+	]
+}

@@ -33,7 +33,7 @@ public class RandomBlocks
 
 	public static void register()
 	{
-		DRAWBRIDGE = register("drawbridge", new DrawbridgeBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().dynamicBounds()));
+		DRAWBRIDGE = register("drawbridge", new DrawbridgeBlock(FabricBlockSettings.of(Material.METAL).nonOpaque().dynamicBounds().requiresTool()));
 		CHARCOAL_BLOCK = register("charcoal_block", new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
 		MOSSY_PRESSURE_PLATE = register("mossy_pressure_plate", new MossyCobblestonePressurePlate(false, true, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
 		MOSSY_PRESSURE_PLATE_SILENT = register("mossy_pressure_plate_silent", new MossyCobblestonePressurePlate(true, true, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));

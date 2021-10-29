@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"watersrandom:obsidian_pressure_plate",
+		"watersrandom:obsidian_pressure_plate_silent",
+		"watersrandom:obsidian_pressure_plate_invisible",
+		"watersrandom:obsidian_pressure_plate_silent_invisible"
+	]
+}
