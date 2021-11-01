@@ -4,13 +4,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
-import net.watersfall.random.item.DaggerItem;
-import net.watersfall.random.item.OpenTools;
-import net.watersfall.random.item.RailgunItem;
-import net.watersfall.random.item.WoodArmorItem;
+import net.watersfall.random.item.*;
 import net.watersfall.random.item.material.RandomArmorMaterials;
 import net.watersfall.random.item.material.RandomToolMaterials;
 import net.watersfall.tools.item.ForgedSwordItem;
@@ -20,6 +18,10 @@ import java.util.List;
 
 public class RandomItems
 {
+	public static BlockItem AIR_MELON_BLOCK;
+	public static BlockItem FIRE_MELON_BLOCK;
+	public static BlockItem EARTH_MELON_BLOCK;
+
 	public static BlockItem DRAWBRIDGE;
 	public static BlockItem CHARCOAL_BLOCK;
 	
@@ -33,6 +35,13 @@ public class RandomItems
 	public static BlockItem OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
 
 	public static BlockItem TINY_CHEST;
+
+	public static Item AIR_MELON;
+	public static Item FIRE_MELON;
+	public static Item EARTH_MELON;
+	public static Item AIR_MELON_SEEDS;
+	public static Item FIRE_MELON_SEEDS;
+	public static Item EARTH_MELON_SEEDS;
 
 	public static Item COAL_PIECE;
 	public static Item CHARCOAL_PIECE;
@@ -93,6 +102,9 @@ public class RandomItems
 
 	public static void register()
 	{
+		AIR_MELON_BLOCK = register(RandomBlocks.AIR_MELON, ItemGroup.BUILDING_BLOCKS);
+		FIRE_MELON_BLOCK = register(RandomBlocks.FIRE_MELON, ItemGroup.BUILDING_BLOCKS);
+		EARTH_MELON_BLOCK = register(RandomBlocks.EARTH_MELON, ItemGroup.BUILDING_BLOCKS);
 		DRAWBRIDGE = register(RandomBlocks.DRAWBRIDGE, ItemGroup.REDSTONE);
 		CHARCOAL_BLOCK = register(RandomBlocks.CHARCOAL_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		MOSSY_PRESSURE_PLATE = register(RandomBlocks.MOSSY_PRESSURE_PLATE, ItemGroup.REDSTONE);
@@ -103,6 +115,12 @@ public class RandomItems
 		OBSIDIAN_PRESSURE_PLATE_SILENT = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_SILENT, ItemGroup.REDSTONE);
 		OBSIDIAN_PRESSURE_PLATE_INVISIBLE = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_INVISIBLE, ItemGroup.REDSTONE);
 		OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE = register(RandomBlocks.OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE, ItemGroup.REDSTONE);
+		AIR_MELON_SEEDS = register("air_melon_seeds", new AliasedBlockItem(RandomBlocks.AIR_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+		FIRE_MELON_SEEDS = register("fire_melon_seeds", new AliasedBlockItem(RandomBlocks.FIRE_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+		EARTH_MELON_SEEDS = register("earth_melon_seeds", new AliasedBlockItem(RandomBlocks.EARTH_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+		AIR_MELON = register("air_melon", new MelonItem(StatusEffects.JUMP_BOOST, StatusEffects.LEVITATION, AIR_MELON_SEEDS));
+		FIRE_MELON = register("fire_melon", new FireMelonItem());
+		EARTH_MELON = register("earth_melon", new MelonItem(StatusEffects.STRENGTH, StatusEffects.SLOWNESS, EARTH_MELON_SEEDS));
 		TINY_CHEST = register(RandomBlocks.TINY_CHEST, ItemGroup.DECORATIONS);
 		COAL_PIECE = register("coal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));
 		CHARCOAL_PIECE = register("charcoal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));

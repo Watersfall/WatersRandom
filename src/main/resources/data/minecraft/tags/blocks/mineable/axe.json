@@ -1,6 +1,9 @@
 {
 	"replace": false,
 	"values": [
-		"watersrandom:tiny_chest"
+		"watersrandom:tiny_chest",
+		"watersrandom:air_melon_block",
+		"watersrandom:fire_melon_block",
+		"watersrandom:earth_melon_block"
 	]
 }

@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "watersrandom:fire_melon"
+		}
+	],
+	"result": {
+		"item": "watersrandom:fire_melon_seeds"
+	}
+}

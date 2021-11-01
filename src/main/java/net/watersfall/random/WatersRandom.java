@@ -1,19 +1,38 @@
 package net.watersfall.random;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.entity.event.v1.ServerEntityWorldChangeEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.event.registry.ItemConstructedCallback;
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.tag.TagFactory;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootTables;
+import net.minecraft.loot.condition.EntityPropertiesLootCondition;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.condition.RandomChanceWithLootingLootCondition;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.LootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.gen.GenerationStep;
 import net.watersfall.random.ability.WoodArmorAbilityImpl;
 import net.watersfall.random.api.ability.WoodArmorAbility;
 import net.watersfall.random.compat.tools.ToolsCompat;
@@ -63,6 +82,49 @@ public class WatersRandom implements ModInitializer
 		}));
 	}
 
+	private void registerBiomeModifications()
+	{
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, RandomConfiguredFeatures.EARTH_MELONS);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.VEGETAL_DECORATION, RandomConfiguredFeatures.FIRE_MELONS);
+		BiomeModifications.addFeature((biome) -> BiomeSelectors.foundInTheEnd().test(biome) && biome.getBiomeKey() != BiomeKeys.THE_END, GenerationStep.Feature.VEGETAL_DECORATION, RandomConfiguredFeatures.AIR_MELONS);
+	}
+
+	private void registerLootModifications()
+	{
+		LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
+			if(id.equals(LootTables.ABANDONED_MINESHAFT_CHEST))
+			{
+				FabricLootPoolBuilder pool = FabricLootPoolBuilder.builder()
+						.rolls(UniformLootNumberProvider.create(0, 16))
+						.withEntry(ItemEntry.builder(RandomItems.EARTH_MELON_SEEDS)
+								.conditionally(RandomChanceLootCondition.builder(0.5F))
+								.build()
+						);
+				supplier.withPool(pool.build());
+			}
+			else if(id.equals(LootTables.NETHER_BRIDGE_CHEST))
+			{
+				FabricLootPoolBuilder pool = FabricLootPoolBuilder.builder()
+						.rolls(UniformLootNumberProvider.create(0, 16))
+						.withEntry(ItemEntry.builder(RandomItems.FIRE_MELON_SEEDS)
+								.conditionally(RandomChanceLootCondition.builder(0.5F))
+								.build()
+						);
+				supplier.withPool(pool.build());
+			}
+			else if(id.equals(LootTables.END_CITY_TREASURE_CHEST))
+			{
+				FabricLootPoolBuilder pool = FabricLootPoolBuilder.builder()
+						.rolls(UniformLootNumberProvider.create(0, 16))
+						.withEntry(ItemEntry.builder(RandomItems.AIR_MELON_SEEDS)
+								.conditionally(RandomChanceLootCondition.builder(0.5F))
+								.build()
+						);
+				supplier.withPool(pool.build());
+			}
+		}));
+	}
+
 	@Override
 	public void onInitialize()
 	{
@@ -75,6 +137,9 @@ public class WatersRandom implements ModInitializer
 		RailgunItem.registerAmmo();
 		registerAbilities();
 		registerEvents();
+		RandomConfiguredFeatures.register();
+		registerBiomeModifications();
+		registerLootModifications();
 		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));
 	}
 }

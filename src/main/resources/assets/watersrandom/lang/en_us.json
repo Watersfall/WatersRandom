@@ -2,6 +2,16 @@
 	"block.watersrandom.drawbridge": "Drawbridge",
 	"block.watersrandom.charcoal_block": "Charcoal Block",
 
+	"block.watersrandom.air_melon_block": "Air Melon",
+	"block.watersrandom.fire_melon_block": "Fire Melon",
+	"block.watersrandom.earth_melon_block": "Earth Melon",
+	"block.watersrandom.air_melon_stem": "Air Melon Stem",
+	"block.watersrandom.fire_melon_stem": "Fire Melon Stem",
+	"block.watersrandom.earth_melon_stem": "Earth Melon Stem",
+	"block.watersrandom.air_melon_attached_stem": "Air Melon Stem",
+	"block.watersrandom.fire_melon_attached_stem": "Fire Melon Stem",
+	"block.watersrandom.earth_melon_attached_stem": "Earth Melon Stem",
+
 	"block.watersrandom.obsidian_pressure_plate": "Obsidian Pressure Plate ▶ ■",
 	"block.watersrandom.obsidian_pressure_plate_silent": "Obsidian Pressure Plate ▷ ■",
 	"block.watersrandom.obsidian_pressure_plate_invisible": "Obsidian Pressure Plate ▶ □",
@@ -15,6 +25,13 @@
 
 	"item.watersrandom.charcoal_piece": "Charcoal Piece",
 	"item.watersrandom.coal_piece": "Coal Piece",
+
+	"item.watersrandom.air_melon": "Air Melon",
+	"item.watersrandom.fire_melon": "Fire Melon",
+	"item.watersrandom.earth_melon": "Earth Melon",
+	"item.watersrandom.air_melon_seeds": "Air Melon Seeds",
+	"item.watersrandom.fire_melon_seeds": "Fire Melon Seeds",
+	"item.watersrandom.earth_melon_seeds": "Earth Melon Seeds",
 
 	"item.watersrandom.wood_dagger": "Wooden Dagger",
 	"item.watersrandom.stone_dagger": "Stone Dagger",

@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "watersrandom:block/air_melon_top",
+		"side": "watersrandom:block/air_melon_side"
+	}
+}

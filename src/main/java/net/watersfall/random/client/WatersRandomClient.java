@@ -13,6 +13,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
@@ -181,5 +182,43 @@ public class WatersRandomClient implements ClientModInitializer
 					overlay
 			);
 		}));
+
+		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+			if(stack.isOf(RandomItems.AIR_MELON) || stack.isOf(RandomItems.AIR_MELON_BLOCK))
+			{
+				return 5013401;
+			}
+			else if(stack.isOf(RandomItems.FIRE_MELON) || stack.isOf(RandomItems.FIRE_MELON_BLOCK))
+			{
+				return 10441252;
+			}
+			else
+			{
+				return 6704179;
+			}
+		}, RandomItems.AIR_MELON_BLOCK, RandomItems.FIRE_MELON_BLOCK, RandomItems.EARTH_MELON_BLOCK);
+		ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+			if(state.isOf(RandomBlocks.AIR_MELON) || state.isOf(RandomBlocks.AIR_MELON_STEM) || state.isOf(RandomBlocks.AIR_MELON_ATTACHED_STEM))
+			{
+				return 5013401;
+			}
+			else if(state.isOf(RandomBlocks.FIRE_MELON) || state.isOf(RandomBlocks.FIRE_MELON_STEM) || state.isOf(RandomBlocks.FIRE_MELON_ATTACHED_STEM))
+			{
+				return 10441252;
+			}
+			else
+			{
+				return 6704179;
+			}
+		}, RandomBlocks.AIR_MELON, RandomBlocks.AIR_MELON_STEM, RandomBlocks.AIR_MELON_ATTACHED_STEM, RandomBlocks.FIRE_MELON, RandomBlocks.FIRE_MELON_STEM, RandomBlocks.FIRE_MELON_ATTACHED_STEM, RandomBlocks.EARTH_MELON, RandomBlocks.EARTH_MELON_STEM, RandomBlocks.EARTH_MELON_ATTACHED_STEM);
+
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+				RandomBlocks.AIR_MELON_STEM,
+				RandomBlocks.AIR_MELON_ATTACHED_STEM,
+				RandomBlocks.FIRE_MELON_STEM,
+				RandomBlocks.FIRE_MELON_ATTACHED_STEM,
+				RandomBlocks.EARTH_MELON_STEM,
+				RandomBlocks.EARTH_MELON_ATTACHED_STEM
+		);
 	}
 }
