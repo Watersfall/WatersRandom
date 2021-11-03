@@ -11,7 +11,6 @@ import net.watersfall.random.WatersRandom;
 import net.watersfall.random.item.*;
 import net.watersfall.random.item.material.RandomArmorMaterials;
 import net.watersfall.random.item.material.RandomToolMaterials;
-import net.watersfall.tools.item.ForgedSwordItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +34,8 @@ public class RandomItems
 	public static BlockItem OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
 
 	public static BlockItem TINY_CHEST;
+
+	public static BlockItem CHOCOLATE_CAKE;
 
 	public static Item AIR_MELON;
 	public static Item FIRE_MELON;
@@ -68,6 +69,8 @@ public class RandomItems
 
 	public static WoodArmorItem OAK_WOOD_HELMET;
 	public static WoodArmorItem OAK_WOOD_BOOTS;
+
+	public static Item CHOCOLATE;
 
 	public static List<ArmorItem> ARMORS = new ArrayList<>();
 
@@ -122,6 +125,8 @@ public class RandomItems
 		FIRE_MELON = register("fire_melon", new FireMelonItem());
 		EARTH_MELON = register("earth_melon", new MelonItem(StatusEffects.STRENGTH, StatusEffects.SLOWNESS, EARTH_MELON_SEEDS));
 		TINY_CHEST = register(RandomBlocks.TINY_CHEST, ItemGroup.DECORATIONS);
+		CHOCOLATE = register("chocolate", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.MELON_SLICE)));
+		CHOCOLATE_CAKE = register(RandomBlocks.CHOCOLATE_CAKE, ItemGroup.FOOD);
 		COAL_PIECE = register("coal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));
 		CHARCOAL_PIECE = register("charcoal_piece", new Item(new FabricItemSettings().group(ItemGroup.MATERIALS).maxCount(64)));
 		WOOD_DAGGER = register("wood_dagger", ToolMaterials.WOOD);

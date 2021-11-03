@@ -23,6 +23,27 @@
 
 	"block.watersrandom.tiny_chest": "Tiny Chest",
 
+	"block.watersrandom.chocolate_cake": "Chocolate Cake",
+	"block.watersrandom.chocolate_candle_cake": "Chocolate Cake with Candle",
+	"block.watersrandom.chocolate_white_candle_cake": "Chocolate Cake with White Candle",
+	"block.watersrandom.chocolate_orange_candle_cake": "Chocolate Cake with Orange Candle",
+	"block.watersrandom.chocolate_magenta_candle_cake": "Chocolate Cake with Magenta Candle",
+	"block.watersrandom.chocolate_light_blue_candle_cake": "Chocolate Cake with Light Blue Candle",
+	"block.watersrandom.chocolate_yellow_candle_cake": "Chocolate Cake with Yellow Candle",
+	"block.watersrandom.chocolate_lime_candle_cake": "Chocolate Cake with Lime Candle",
+	"block.watersrandom.chocolate_pink_candle_cake": "Chocolate Cake with Pink Candle",
+	"block.watersrandom.chocolate_gray_candle_cake": "Chocolate Cake with Gray Candle",
+	"block.watersrandom.chocolate_light_gray_candle_cake": "Chocolate Cake with Light Gray Candle",
+	"block.watersrandom.chocolate_cyan_candle_cake": "Chocolate Cake with Cyan Candle",
+	"block.watersrandom.chocolate_purple_candle_cake": "Chocolate Cake with Purple Candle",
+	"block.watersrandom.chocolate_blue_candle_cake": "Chocolate Cake with Blue Candle",
+	"block.watersrandom.chocolate_brown_candle_cake": "Chocolate Cake with Brown Candle",
+	"block.watersrandom.chocolate_green_candle_cake": "Chocolate Cake with Green Candle",
+	"block.watersrandom.chocolate_red_candle_cake": "Chocolate Cake with Red Candle",
+	"block.watersrandom.chocolate_black_candle_cake": "Chocolate Cake with Black Candle",
+
+	"item.watersrandom.chocolate": "Chocolate",
+
 	"item.watersrandom.charcoal_piece": "Charcoal Piece",
 	"item.watersrandom.coal_piece": "Coal Piece",
 

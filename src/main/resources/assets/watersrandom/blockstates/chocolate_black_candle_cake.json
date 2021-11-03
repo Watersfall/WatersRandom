@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"lit=false": {
+			"model": "watersrandom:block/chocolate_black_candle_cake"
+		},
+		"lit=true": {
+			"model": "watersrandom:block/chocolate_black_candle_cake_lit"
+		}
+	}
+}

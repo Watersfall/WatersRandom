@@ -18,6 +18,25 @@ public class RandomBlocks
 	public static WatersAttachedStemBlock FIRE_MELON_ATTACHED_STEM;
 	public static WatersAttachedStemBlock EARTH_MELON_ATTACHED_STEM;
 
+	public static CakeBlock CHOCOLATE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_WHITE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_ORANGE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_MAGENTA_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_LIGHT_BLUE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_YELLOW_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_LIME_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_PINK_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_GRAY_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_LIGHT_GRAY_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_CYAN_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_PURPLE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_BLUE_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_BROWN_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_GREEN_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_RED_CANDLE_CAKE;
+	public static WatersCandleCakeBlock CHOCOLATE_BLACK_CANDLE_CAKE;
+
 	public static DrawbridgeBlock DRAWBRIDGE;
 	public static Block CHARCOAL_BLOCK;
 	public static MossyCobblestonePressurePlate MOSSY_PRESSURE_PLATE;
@@ -58,5 +77,23 @@ public class RandomBlocks
 		OBSIDIAN_PRESSURE_PLATE_INVISIBLE = register("obsidian_pressure_plate_invisible", new ObsidianPressurePlate(false, false, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
 		OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE = register("obsidian_pressure_plate_silent_invisible", new ObsidianPressurePlate(true, false, FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
 		TINY_CHEST = register("tiny_chest", new TinyChestBlock(FabricBlockSettings.copyOf(Blocks.CHEST)));
+		CHOCOLATE_CAKE = register("chocolate_cake", new WatersCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
+		CHOCOLATE_CANDLE_CAKE = register("chocolate_candle_cake", new WatersCandleCakeBlock(Blocks.CANDLE, FabricBlockSettings.copyOf(Blocks.CANDLE_CAKE)));
+		CHOCOLATE_WHITE_CANDLE_CAKE = register("chocolate_white_candle_cake", new WatersCandleCakeBlock(Blocks.WHITE_CANDLE, FabricBlockSettings.copyOf(Blocks.WHITE_CANDLE_CAKE)));
+		CHOCOLATE_ORANGE_CANDLE_CAKE = register("chocolate_orange_candle_cake", new WatersCandleCakeBlock(Blocks.ORANGE_CANDLE, FabricBlockSettings.copyOf(Blocks.ORANGE_CANDLE_CAKE)));
+		CHOCOLATE_MAGENTA_CANDLE_CAKE = register("chocolate_magenta_candle_cake", new WatersCandleCakeBlock(Blocks.MAGENTA_CANDLE, FabricBlockSettings.copyOf(Blocks.MAGENTA_CANDLE_CAKE)));
+		CHOCOLATE_LIGHT_BLUE_CANDLE_CAKE = register("chocolate_light_blue_candle_cake", new WatersCandleCakeBlock(Blocks.LIGHT_BLUE_CANDLE, FabricBlockSettings.copyOf(Blocks.LIGHT_BLUE_CANDLE_CAKE)));
+		CHOCOLATE_YELLOW_CANDLE_CAKE = register("chocolate_yellow_candle_cake", new WatersCandleCakeBlock(Blocks.YELLOW_CANDLE, FabricBlockSettings.copyOf(Blocks.YELLOW_CANDLE_CAKE)));
+		CHOCOLATE_LIME_CANDLE_CAKE = register("chocolate_lime_candle_cake", new WatersCandleCakeBlock(Blocks.LIME_CANDLE, FabricBlockSettings.copyOf(Blocks.LIME_CANDLE_CAKE)));
+		CHOCOLATE_PINK_CANDLE_CAKE = register("chocolate_pink_candle_cake", new WatersCandleCakeBlock(Blocks.PINK_CANDLE, FabricBlockSettings.copyOf(Blocks.PINK_CANDLE_CAKE)));
+		CHOCOLATE_GRAY_CANDLE_CAKE = register("chocolate_gray_candle_cake", new WatersCandleCakeBlock(Blocks.GRAY_CANDLE, FabricBlockSettings.copyOf(Blocks.GRAY_CANDLE_CAKE)));
+		CHOCOLATE_LIGHT_GRAY_CANDLE_CAKE = register("chocolate_light_gray_candle_cake", new WatersCandleCakeBlock(Blocks.LIGHT_GRAY_CANDLE, FabricBlockSettings.copyOf(Blocks.LIGHT_GRAY_CANDLE_CAKE)));
+		CHOCOLATE_CYAN_CANDLE_CAKE = register("chocolate_cyan_candle_cake", new WatersCandleCakeBlock(Blocks.CYAN_CANDLE, FabricBlockSettings.copyOf(Blocks.CYAN_CANDLE_CAKE)));
+		CHOCOLATE_PURPLE_CANDLE_CAKE = register("chocolate_purple_candle_cake", new WatersCandleCakeBlock(Blocks.PURPLE_CANDLE, FabricBlockSettings.copyOf(Blocks.PURPLE_CANDLE_CAKE)));
+		CHOCOLATE_BLUE_CANDLE_CAKE = register("chocolate_blue_candle_cake", new WatersCandleCakeBlock(Blocks.BLUE_CANDLE, FabricBlockSettings.copyOf(Blocks.BLUE_CANDLE_CAKE)));
+		CHOCOLATE_BROWN_CANDLE_CAKE = register("chocolate_brown_candle_cake", new WatersCandleCakeBlock(Blocks.BROWN_CANDLE, FabricBlockSettings.copyOf(Blocks.BROWN_CANDLE_CAKE)));
+		CHOCOLATE_GREEN_CANDLE_CAKE = register("chocolate_green_candle_cake", new WatersCandleCakeBlock(Blocks.GREEN_CANDLE, FabricBlockSettings.copyOf(Blocks.GREEN_CANDLE_CAKE)));
+		CHOCOLATE_RED_CANDLE_CAKE = register("chocolate_red_candle_cake", new WatersCandleCakeBlock(Blocks.RED_CANDLE, FabricBlockSettings.copyOf(Blocks.RED_CANDLE_CAKE)));
+		CHOCOLATE_BLACK_CANDLE_CAKE = register("chocolate_black_candle_cake", new WatersCandleCakeBlock(Blocks.BLACK_CANDLE, FabricBlockSettings.copyOf(Blocks.BLACK_CANDLE_CAKE)));
 	}
 }
