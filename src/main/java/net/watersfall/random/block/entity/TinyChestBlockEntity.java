@@ -150,10 +150,10 @@ public class TinyChestBlockEntity extends BlockEntity implements ChestAnimationP
 	}
 
 	@Override
-	public NbtCompound writeNbt(NbtCompound nbt)
+	public void writeNbt(NbtCompound nbt)
 	{
 		Inventories.writeNbt(nbt, contents);
-		return super.writeNbt(nbt);
+		super.writeNbt(nbt);
 	}
 
 	public static void clientTick(World world, BlockPos pos, BlockState state, TinyChestBlockEntity entity)

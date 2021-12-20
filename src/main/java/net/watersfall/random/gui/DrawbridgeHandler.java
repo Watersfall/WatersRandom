@@ -60,6 +60,7 @@ public class DrawbridgeHandler extends ScreenHandler
 				if(drawbridge.getWorld() != null && !drawbridge.getWorld().isClient)
 				{
 					drawbridge.sync();
+					drawbridge.markDirty();
 				}
 			}
 		});

@@ -150,7 +150,7 @@ public class TinyChestBlock extends AbstractChestBlock<TinyChestBlockEntity> imp
 	{
 		if(state.get(WATERLOGGED))
 		{
-			world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+			world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 		}
 		return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
 	}

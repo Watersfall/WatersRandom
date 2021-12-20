@@ -70,9 +70,9 @@ public class WatersRandom implements ModInitializer
 
 	private void registerBiomeModifications()
 	{
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, RandomConfiguredFeatures.EARTH_MELONS);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.VEGETAL_DECORATION, RandomConfiguredFeatures.FIRE_MELONS);
-		BiomeModifications.addFeature((biome) -> BiomeSelectors.foundInTheEnd().test(biome) && biome.getBiomeKey() != BiomeKeys.THE_END, GenerationStep.Feature.VEGETAL_DECORATION, RandomConfiguredFeatures.AIR_MELONS);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, RandomPlacedFeatures.EARTH_MELONS);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.FIRE_MELONS);
+		BiomeModifications.addFeature((biome) -> BiomeSelectors.foundInTheEnd().test(biome) && biome.getBiomeKey() != BiomeKeys.THE_END, GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.AIR_MELONS);
 	}
 
 	private void registerLootModifications()
@@ -124,6 +124,7 @@ public class WatersRandom implements ModInitializer
 		registerAbilities();
 		registerEvents();
 		RandomConfiguredFeatures.register();
+		RandomPlacedFeatures.register();
 		registerBiomeModifications();
 		registerLootModifications();
 		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));

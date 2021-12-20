@@ -1,11 +1,8 @@
 package net.watersfall.random.block.entity;
 
-import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
@@ -23,7 +20,7 @@ import net.minecraft.world.World;
 import net.watersfall.random.block.DrawbridgeBlock;
 import net.watersfall.random.registry.RandomBlockEntities;
 
-public class DrawbridgeBlockEntity extends BlockEntity implements BlockEntityClientSerializable
+public class DrawbridgeBlockEntity extends SyncableBlockEntity
 {
 	public static final int MAX_LENGTH = 16;
 
@@ -49,13 +46,12 @@ public class DrawbridgeBlockEntity extends BlockEntity implements BlockEntityCli
 	}
 
 	@Override
-	public NbtCompound writeNbt(NbtCompound nbt)
+	public void writeNbt(NbtCompound nbt)
 	{
 		super.writeNbt(nbt);
 		Inventories.writeNbt(nbt, DefaultedList.copyOf(ItemStack.EMPTY, inventory.getStack(0), inventory.getStack(1)));
 		nbt.putInt("placed_blocks", placedBlocks);
 		nbt.put("last_placed", placedStack.writeNbt(new NbtCompound()));
-		return nbt;
 	}
 
 	@Override
