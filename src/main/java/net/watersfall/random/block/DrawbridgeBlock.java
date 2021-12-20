@@ -56,7 +56,15 @@ public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
 	public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify)
 	{
 		super.neighborUpdate(state, world, pos, block, fromPos, notify);
-		boolean powered = world.isReceivingRedstonePower(pos);
+		boolean powered = false;
+		Direction facing = state.get(FACING);
+		for(Direction direction : Direction.values())
+		{
+			if(direction != facing &&  world.getEmittedRedstonePower(pos.offset(direction), direction) > 0)
+			{
+				powered = true;
+			}
+		}
 		if(state.get(POWERED) && !powered)
 		{
 			world.setBlockState(pos, state.with(POWERED, false));
