@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "watersrandom:block/project_table_front",
+		"north": "watersrandom:block/project_table_front",
+		"south": "watersrandom:block/project_table_side",
+		"east": "watersrandom:block/project_table_side",
+		"west": "watersrandom:block/project_table_front",
+		"up": "watersrandom:block/project_table_top",
+		"down": "watersrandom:block/blank"
+	}
+}

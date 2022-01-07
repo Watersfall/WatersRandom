@@ -35,10 +35,13 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.api.ability.WoodArmorAbility;
+import net.watersfall.random.block.entity.ProjectTableBlockEntity;
 import net.watersfall.random.block.entity.TinyChestBlockEntity;
 import net.watersfall.random.client.gui.DrawbridgeScreen;
+import net.watersfall.random.client.gui.ProjectTableScreen;
 import net.watersfall.random.client.gui.TinyChestScreen;
 import net.watersfall.random.client.renderer.block.DrawbridgeBlockRenderer;
+import net.watersfall.random.client.renderer.block.ProjectTableBlockRenderer;
 import net.watersfall.random.client.renderer.block.TinyChestBlockRenderer;
 import net.watersfall.random.client.renderer.entity.RailgunBulletEntityRenderer;
 import net.watersfall.random.compat.tools.ToolsCompat;
@@ -64,12 +67,13 @@ public class WatersRandomClient implements ClientModInitializer
 	@Override
 	public void onInitializeClient()
 	{
-		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RandomBlocks.DRAWBRIDGE);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RandomBlocks.DRAWBRIDGE, RandomBlocks.PROJECT_TABLE);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.DRAWBRIDGE, DrawbridgeBlockRenderer::new);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.TINY_CHEST, TinyChestBlockRenderer::new);
+		BlockEntityRendererRegistry.register(RandomBlockEntities.PROJECT_TABLE, ProjectTableBlockRenderer::new);
 		ScreenRegistry.register(RandomScreenHandlers.DRAWBRIDGE, DrawbridgeScreen::new);
 		ScreenRegistry.register(RandomScreenHandlers.TINY_CHEST, TinyChestScreen::new);
-
+		ScreenRegistry.register(RandomScreenHandlers.PROJECT_TABLE, ProjectTableScreen::new);
 		ToolsCompat.INSTANCE.loadClient(FabricLoader.getInstance().isModLoaded("tools"));
 
 		EntityRendererRegistry.register(RandomEntities.RAILGUN_BULLET, RailgunBulletEntityRenderer::new);
@@ -182,6 +186,27 @@ public class WatersRandomClient implements ClientModInitializer
 					overlay
 			);
 		}));
+
+		BuiltinItemRendererRegistry.INSTANCE.register(RandomItems.PROJECT_TABLE_BLOCK, (((stack, mode, matrices, vertexConsumers, light, overlay) -> {
+			MinecraftClient.getInstance().getBlockRenderManager().renderBlock(
+					RandomBlocks.PROJECT_TABLE.getDefaultState(),
+					BlockPos.ORIGIN,
+					MinecraftClient.getInstance().world,
+					matrices,
+					vertexConsumers.getBuffer(RenderLayer.getCutout()),
+					false,
+					MinecraftClient.getInstance().world.random
+			);
+			var entity = new ProjectTableBlockEntity(BlockPos.ORIGIN, RandomBlocks.PROJECT_TABLE.getDefaultState());
+			entity.setRenderState(stack.getOrCreateNbt().getString("block"));
+			MinecraftClient.getInstance().getBlockEntityRenderDispatcher().renderEntity(
+					entity,
+					matrices,
+					vertexConsumers,
+					light,
+					overlay
+			);
+		})));
 
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
 			if(stack.isOf(RandomItems.AIR_MELON) || stack.isOf(RandomItems.AIR_MELON_BLOCK))

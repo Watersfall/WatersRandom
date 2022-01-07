@@ -49,6 +49,8 @@ public class RandomBlocks
 	public static ObsidianPressurePlate OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
 	public static TinyChestBlock TINY_CHEST;
 
+	public static ProjectTableBlock PROJECT_TABLE;
+
 
 	private static <T extends Block> T register(String name, T block)
 	{
@@ -95,5 +97,6 @@ public class RandomBlocks
 		CHOCOLATE_GREEN_CANDLE_CAKE = register("chocolate_green_candle_cake", new WatersCandleCakeBlock(Blocks.GREEN_CANDLE, FabricBlockSettings.copyOf(Blocks.GREEN_CANDLE_CAKE)));
 		CHOCOLATE_RED_CANDLE_CAKE = register("chocolate_red_candle_cake", new WatersCandleCakeBlock(Blocks.RED_CANDLE, FabricBlockSettings.copyOf(Blocks.RED_CANDLE_CAKE)));
 		CHOCOLATE_BLACK_CANDLE_CAKE = register("chocolate_black_candle_cake", new WatersCandleCakeBlock(Blocks.BLACK_CANDLE, FabricBlockSettings.copyOf(Blocks.BLACK_CANDLE_CAKE)));
+		PROJECT_TABLE = register("project_table", new ProjectTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
 	}
 }

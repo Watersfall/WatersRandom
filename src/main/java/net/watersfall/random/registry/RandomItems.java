@@ -33,6 +33,8 @@ public class RandomItems
 	public static BlockItem OBSIDIAN_PRESSURE_PLATE_INVISIBLE;
 	public static BlockItem OBSIDIAN_PRESSURE_PLATE_SILENT_INVISIBLE;
 
+	public static BlockItem PROJECT_TABLE_BLOCK;
+
 	public static BlockItem TINY_CHEST;
 
 	public static BlockItem CHOCOLATE_CAKE;
@@ -103,6 +105,11 @@ public class RandomItems
 		return item;
 	}
 
+	private static BlockItem registerProjectTable()
+	{
+		return register("project_table", new ProjectTableBlockItem(RandomBlocks.PROJECT_TABLE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+	}
+
 	public static void register()
 	{
 		AIR_MELON_BLOCK = register(RandomBlocks.AIR_MELON, ItemGroup.BUILDING_BLOCKS);
@@ -124,6 +131,7 @@ public class RandomItems
 		AIR_MELON = register("air_melon", new MelonItem(StatusEffects.JUMP_BOOST, StatusEffects.LEVITATION, AIR_MELON_SEEDS));
 		FIRE_MELON = register("fire_melon", new FireMelonItem());
 		EARTH_MELON = register("earth_melon", new MelonItem(StatusEffects.STRENGTH, StatusEffects.SLOWNESS, EARTH_MELON_SEEDS));
+		PROJECT_TABLE_BLOCK = registerProjectTable();
 		TINY_CHEST = register(RandomBlocks.TINY_CHEST, ItemGroup.DECORATIONS);
 		CHOCOLATE = register("chocolate", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.MELON_SLICE)));
 		CHOCOLATE_CAKE = register(RandomBlocks.CHOCOLATE_CAKE, ItemGroup.FOOD);

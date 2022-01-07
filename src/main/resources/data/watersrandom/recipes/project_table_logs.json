@@ -1,0 +1,22 @@
+{
+	"type": "watersrandom:project_table",
+	"pattern": [
+		"PWP",
+		"PCP",
+		"PPP"
+	],
+	"key": {
+		"P": {
+			"tag": "minecraft:logs"
+		},
+		"W": {
+			"item": "minecraft:crafting_table"
+		},
+		"C": {
+			"item": "minecraft:chest"
+		}
+	},
+	"result": {
+		"item": "watersrandom:project_table"
+	}
+}
