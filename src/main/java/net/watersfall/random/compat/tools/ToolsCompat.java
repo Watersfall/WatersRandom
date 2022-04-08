@@ -36,8 +36,8 @@ public class ToolsCompat
 		}
 		else
 		{
-			DAGGER = new Item(new FabricItemSettings());
-			DAGGER_BLADE = new Item(new FabricItemSettings());
+			/*DAGGER = new Item(new FabricItemSettings());
+			DAGGER_BLADE = new Item(new FabricItemSettings());*/
 		}
 		loaded = isLoaded;
 	}

@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
@@ -24,7 +23,9 @@ import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.EntityTypeTags;
 import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.watersfall.random.ability.WoodArmorAbilityImpl;
@@ -42,7 +43,7 @@ public class WatersRandom implements ModInitializer
 {
 	public static final String MODID = "watersrandom";
 
-	public static final Tag<Item> GOLD_ARMORS = TagFactory.ITEM.create(new Identifier("c", "gold_armors"));
+	public static final TagKey<Item> GOLD_ARMORS = TagKey.of(Registry.ITEM_KEY, new Identifier("c", "gold_armors"));
 
 	public static Identifier getId(String name)
 	{
@@ -79,9 +80,9 @@ public class WatersRandom implements ModInitializer
 
 	private void registerBiomeModifications()
 	{
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, RandomPlacedFeatures.EARTH_MELONS);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.FIRE_MELONS);
-		BiomeModifications.addFeature((biome) -> BiomeSelectors.foundInTheEnd().test(biome) && biome.getBiomeKey() != BiomeKeys.THE_END, GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.AIR_MELONS);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, RandomPlacedFeatures.EARTH_MELONS.getKey().get());
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.FIRE_MELONS.getKey().get());
+		BiomeModifications.addFeature((biome) -> BiomeSelectors.foundInTheEnd().test(biome) && biome.getBiomeKey() != BiomeKeys.THE_END, GenerationStep.Feature.VEGETAL_DECORATION, RandomPlacedFeatures.AIR_MELONS.getKey().get());
 	}
 
 	private void registerLootModifications()
