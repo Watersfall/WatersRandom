@@ -23,7 +23,6 @@ import net.watersfall.random.gui.ProjectTableScreenHandler;
 import net.watersfall.random.inventory.BasicInventory;
 import net.watersfall.random.registry.RandomBlockEntities;
 import net.watersfall.random.registry.RandomBlocks;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -49,7 +48,6 @@ public class ProjectTableBlockEntity extends SyncableBlockEntity implements Name
 		return new TranslatableText(RandomBlocks.PROJECT_TABLE.getTranslationKey());
 	}
 
-	@Nullable
 	@Override
 	public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player)
 	{

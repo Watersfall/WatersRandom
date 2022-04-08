@@ -37,7 +37,6 @@ import net.minecraft.world.WorldAccess;
 import net.watersfall.random.block.entity.TinyChestBlockEntity;
 import net.watersfall.random.gui.TinyChestScreenHandler;
 import net.watersfall.random.registry.RandomBlockEntities;
-import org.jetbrains.annotations.Nullable;
 
 public class TinyChestBlock extends AbstractChestBlock<TinyChestBlockEntity> implements Waterloggable
 {
@@ -91,7 +90,6 @@ public class TinyChestBlock extends AbstractChestBlock<TinyChestBlockEntity> imp
 		return ActionResult.success(world.isClient);
 	}
 
-	@Nullable
 	@Override
 	public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos)
 	{
@@ -173,14 +171,12 @@ public class TinyChestBlock extends AbstractChestBlock<TinyChestBlockEntity> imp
 		return BlockRenderType.ENTITYBLOCK_ANIMATED;
 	}
 
-	@Nullable
 	@Override
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state)
 	{
 		return new TinyChestBlockEntity(pos, state);
 	}
 
-	@Nullable
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type)
 	{

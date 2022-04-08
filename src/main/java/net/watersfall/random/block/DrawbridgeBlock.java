@@ -33,7 +33,6 @@ import net.watersfall.random.gui.DrawbridgeHandler;
 import net.watersfall.random.registry.RandomBlockEntities;
 import net.watersfall.random.registry.RandomBlocks;
 import net.watersfall.random.registry.RandomItems;
-import org.jetbrains.annotations.Nullable;
 
 public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
 {
@@ -88,7 +87,6 @@ public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
 					return new TranslatableText("block.watersrandom.drawbridge");
 				}
 
-				@Nullable
 				@Override
 				public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player)
 				{
@@ -116,7 +114,6 @@ public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
 		}
 	}
 
-	@Nullable
 	@Override
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state)
 	{
@@ -129,14 +126,12 @@ public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
 		return BlockRenderType.ENTITYBLOCK_ANIMATED;
 	}
 
-	@Nullable
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type)
 	{
 		return world.isClient ? null : RandomBlockEntities.checkType(type, RandomBlockEntities.DRAWBRIDGE, DrawbridgeBlockEntity::tick);
 	}
 
-	@Nullable
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx)
 	{

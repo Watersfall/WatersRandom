@@ -1,8 +1,8 @@
 package net.watersfall.random.item.material;
 
-import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
@@ -13,7 +13,7 @@ public class RandomToolMaterials implements ToolMaterial
 			299,
 			5.8F,
 			1.8F,
-			MiningLevels.IRON,
+			ToolMaterials.IRON.getMiningLevel(),
 			22,
 			() -> Ingredient.ofItems(Items.IRON_INGOT)
 	);

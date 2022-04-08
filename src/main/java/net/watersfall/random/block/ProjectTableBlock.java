@@ -13,7 +13,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.watersfall.random.block.entity.ProjectTableBlockEntity;
-import org.jetbrains.annotations.Nullable;
 
 public class ProjectTableBlock extends BlockWithEntity
 {
@@ -22,7 +21,6 @@ public class ProjectTableBlock extends BlockWithEntity
 		super(settings);
 	}
 
-	@Nullable
 	@Override
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state)
 	{
@@ -46,7 +44,7 @@ public class ProjectTableBlock extends BlockWithEntity
 	}
 
 	@Override
-	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack)
+	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack)
 	{
 		super.onPlaced(world, pos, state, placer, stack);
 		if(world.getBlockEntity(pos) instanceof ProjectTableBlockEntity entity)

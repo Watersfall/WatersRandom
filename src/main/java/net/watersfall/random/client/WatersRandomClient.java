@@ -14,6 +14,7 @@ import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderLayers;
+import net.minecraft.client.render.entity.ArrowEntityRenderer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
@@ -77,6 +78,7 @@ public class WatersRandomClient implements ClientModInitializer
 		ToolsCompat.INSTANCE.loadClient(FabricLoader.getInstance().isModLoaded("tools"));
 
 		EntityRendererRegistry.register(RandomEntities.RAILGUN_BULLET, RailgunBulletEntityRenderer::new);
+		EntityRendererRegistry.register(RandomEntities.SONIC_ARROW, ArrowEntityRenderer::new);
 
 		ItemTooltipCallback.EVENT.register(((stack, context, lines) -> {
 			if(RailgunItem.RailgunAmmo.containsKey(stack.getItem()))

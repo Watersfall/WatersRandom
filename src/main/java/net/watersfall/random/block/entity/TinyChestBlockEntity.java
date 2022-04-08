@@ -30,7 +30,6 @@ import net.watersfall.random.gui.TinyChestScreenHandler;
 import net.watersfall.random.inventory.BasicInventory;
 import net.watersfall.random.registry.RandomBlockEntities;
 import net.watersfall.random.registry.RandomBlocks;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -129,7 +128,6 @@ public class TinyChestBlockEntity extends BlockEntity implements ChestAnimationP
 		return RandomBlocks.TINY_CHEST.getName();
 	}
 
-	@Nullable
 	@Override
 	public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player)
 	{

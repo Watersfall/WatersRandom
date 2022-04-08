@@ -14,7 +14,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.watersfall.random.entity.RailgunBulletEntity;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
@@ -70,7 +69,7 @@ public class RailgunItem extends Item
 	}
 
 	@Override
-	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context)
+	public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context)
 	{
 		super.appendTooltip(stack, world, tooltip, context);
 		tooltip.add(new TranslatableText("item.watersrandom.railgun.current_ammo").formatted(Formatting.DARK_GRAY));

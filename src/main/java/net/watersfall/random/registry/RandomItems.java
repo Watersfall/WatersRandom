@@ -69,6 +69,8 @@ public class RandomItems
 	public static ShovelItem GILDED_SHOVEL;
 	public static SwordItem GILDED_DAGGER;
 
+	public static ArrowItem SONIC_ARROW;
+
 	public static WoodArmorItem OAK_WOOD_HELMET;
 	public static WoodArmorItem OAK_WOOD_BOOTS;
 
@@ -156,6 +158,7 @@ public class RandomItems
 		GILDED_DAGGER = register("gilded_dagger", RandomToolMaterials.GILDED);
 		OAK_WOOD_HELMET = register("wood_helmet", EquipmentSlot.HEAD);
 		OAK_WOOD_BOOTS = register("wood_boots", EquipmentSlot.FEET);
+		SONIC_ARROW = register("sonic_arrow", new SonicArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT)));
 
 		FuelRegistry.INSTANCE.add(COAL_PIECE, 200);
 		FuelRegistry.INSTANCE.add(CHARCOAL_PIECE, 200);

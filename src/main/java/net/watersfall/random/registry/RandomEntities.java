@@ -7,10 +7,12 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.entity.RailgunBulletEntity;
+import net.watersfall.random.entity.SonicArrowEntity;
 
 public class RandomEntities
 {
 	public static EntityType<RailgunBulletEntity> RAILGUN_BULLET;
+	public static EntityType<SonicArrowEntity> SONIC_ARROW;
 
 	public static void register()
 	{
@@ -21,6 +23,15 @@ public class RandomEntities
 				.trackRangeBlocks(4)
 				.fireImmune()
 				.entityFactory(RailgunBulletEntity::new)
+				.build()
+		);
+
+		SONIC_ARROW = Registry.register(Registry.ENTITY_TYPE, WatersRandom.getId("sonic_arrow"), FabricEntityTypeBuilder
+				.<SonicArrowEntity>create(SpawnGroup.MISC)
+				.dimensions(EntityDimensions.fixed(0.5f, 0.5f))
+				.trackRangeBlocks(4)
+				.trackedUpdateRate(20)
+				.entityFactory(SonicArrowEntity::new)
 				.build()
 		);
 	}

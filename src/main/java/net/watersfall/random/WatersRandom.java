@@ -10,12 +10,19 @@ import net.fabricmc.fabric.api.tag.TagFactory;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootTables;
+import net.minecraft.loot.condition.EntityPropertiesLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.condition.RandomChanceWithLootingLootCondition;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.tag.EntityTypeTags;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.BiomeKeys;
@@ -28,6 +35,8 @@ import net.watersfall.random.mixin.accessor.MobSpawnerLogicAccessor;
 import net.watersfall.random.registry.*;
 import net.watersfall.wet.api.abilities.AbilityProvider;
 import net.watersfall.wet.api.event.AbilityCreateEvent;
+
+import java.util.Optional;
 
 public class WatersRandom implements ModInitializer
 {
@@ -107,6 +116,22 @@ public class WatersRandom implements ModInitializer
 								.build()
 						);
 				supplier.withPool(pool.build());
+			}
+			else if(id.getPath().startsWith("entities/"))
+			{
+				String[] path = id.getPath().split("/");
+				Optional<EntityType<?>> optional = EntityType.get(path[path.length - 1]);
+				if(optional.isPresent())
+				{
+					FabricLootPoolBuilder pool = FabricLootPoolBuilder.builder()
+							.rolls(ConstantLootNumberProvider.create(1))
+							.withEntry(ItemEntry.builder(RandomItems.SONIC_ARROW)
+									.conditionally(RandomChanceWithLootingLootCondition.builder(0.01F, 0.02F))
+									.conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS, EntityPredicate.Builder.create().type(EntityTypeTags.SKELETONS)))
+									.build()
+							);
+					supplier.withPool(pool.build());
+				}
 			}
 		}));
 	}
