@@ -52,6 +52,8 @@
 	"item.watersrandom.charcoal_piece": "Charcoal Piece",
 	"item.watersrandom.coal_piece": "Coal Piece",
 
+	"item.watersrandom.sonic_arrow": "Sonic Arrow",
+
 	"item.watersrandom.air_melon": "Air Melon",
 	"item.watersrandom.fire_melon": "Fire Melon",
 	"item.watersrandom.earth_melon": "Earth Melon",
@@ -97,5 +99,7 @@
 	"item.watersrandom.wood_boots": "%s Boots",
 
 	"advancement.watersrandom.envy": "Envy",
-	"advancement.watersrandom.envy.desc": "Jealousy"
+	"advancement.watersrandom.envy.desc": "Jealousy",
+
+	"entity.watersrandom.sonic_arrow": "Sonic Arrow"
 }
