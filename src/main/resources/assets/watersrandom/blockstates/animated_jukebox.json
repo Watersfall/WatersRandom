@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"has_record=true": {
+			"model": "watersrandom:block/animated_jukebox"
+		},
+		"has_record=false": {
+			"model": "watersrandom:block/animated_jukebox_off"
+		}
+	}
+}

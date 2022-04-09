@@ -26,6 +26,8 @@ public class RandomItems
 	public static BlockItem IGNITER;
 
 	public static BlockItem CHARCOAL_BLOCK;
+
+	public static BlockItem ANIMATED_JUKEBOX;
 	
 	public static BlockItem MOSSY_PRESSURE_PLATE;
 	public static BlockItem MOSSY_PRESSURE_PLATE_SILENT;
@@ -123,6 +125,7 @@ public class RandomItems
 		DRAWBRIDGE = register(RandomBlocks.DRAWBRIDGE, ItemGroup.REDSTONE);
 		IGNITER = register(RandomBlocks.IGNITER, ItemGroup.REDSTONE);
 		CHARCOAL_BLOCK = register(RandomBlocks.CHARCOAL_BLOCK, ItemGroup.BUILDING_BLOCKS);
+		ANIMATED_JUKEBOX = register(RandomBlocks.ANIMATED_JUKEBOX, ItemGroup.BUILDING_BLOCKS);
 		MOSSY_PRESSURE_PLATE = register(RandomBlocks.MOSSY_PRESSURE_PLATE, ItemGroup.REDSTONE);
 		MOSSY_PRESSURE_PLATE_SILENT = register(RandomBlocks.MOSSY_PRESSURE_PLATE_SILENT, ItemGroup.REDSTONE);
 		MOSSY_PRESSURE_PLATE_INVISIBLE = register(RandomBlocks.MOSSY_PRESSURE_PLATE_INVISIBLE, ItemGroup.REDSTONE);

@@ -53,6 +53,7 @@ public class RandomBlocks
 
 	public static IgniterBlock IGNITER;
 
+	public static AnimatedJukeboxBlock ANIMATED_JUKEBOX;
 
 	private static <T extends Block> T register(String name, T block)
 	{
@@ -101,5 +102,6 @@ public class RandomBlocks
 		CHOCOLATE_BLACK_CANDLE_CAKE = register("chocolate_black_candle_cake", new WatersCandleCakeBlock(Blocks.BLACK_CANDLE, FabricBlockSettings.copyOf(Blocks.BLACK_CANDLE_CAKE)));
 		PROJECT_TABLE = register("project_table", new ProjectTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
 		IGNITER = register("igniter", new IgniterBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER).mapColor(MapColor.RED)));
+		ANIMATED_JUKEBOX = register("animated_jukebox", new AnimatedJukeboxBlock(FabricBlockSettings.copyOf(Blocks.JUKEBOX)));
 	}
 }
