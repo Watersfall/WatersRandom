@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "watersrandom:corn_on_the_cob"
+	},
+	"result": "watersrandom:grilled_corn",
+	"experience": 0.35,
+	"cookingtime": 200
+}

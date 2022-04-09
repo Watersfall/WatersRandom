@@ -13,6 +13,7 @@
 	"block.watersrandom.air_melon_attached_stem": "Air Melon Stem",
 	"block.watersrandom.fire_melon_attached_stem": "Fire Melon Stem",
 	"block.watersrandom.earth_melon_attached_stem": "Earth Melon Stem",
+	"block.watersrandom.corn": "Corn Crop",
 
 	"block.watersrandom.obsidian_pressure_plate": "Obsidian Pressure Plate ▶ ■",
 	"block.watersrandom.obsidian_pressure_plate_silent": "Obsidian Pressure Plate ▷ ■",
@@ -57,6 +58,12 @@
 	"item.watersrandom.air_melon_seeds": "Air Melon Seeds",
 	"item.watersrandom.fire_melon_seeds": "Fire Melon Seeds",
 	"item.watersrandom.earth_melon_seeds": "Earth Melon Seeds",
+
+	"item.watersrandom.corn_on_the_cob": "Corn On The Cob",
+	"item.watersrandom.grilled_corn": "Grilled Corn",
+	"item.watersrandom.corn_seeds": "Corn Seeds",
+	"item.watersrandom.popcorn": "Popcorn",
+	"item.watersrandom.buttered_corn": "Buttered Corn",
 
 	"item.watersrandom.wood_dagger": "Wooden Dagger",
 	"item.watersrandom.stone_dagger": "Stone Dagger",

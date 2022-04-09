@@ -17,6 +17,7 @@ public class RandomBlocks
 	public static WatersAttachedStemBlock AIR_MELON_ATTACHED_STEM;
 	public static WatersAttachedStemBlock FIRE_MELON_ATTACHED_STEM;
 	public static WatersAttachedStemBlock EARTH_MELON_ATTACHED_STEM;
+	public static CornBlock CORN_CROP;
 
 	public static CakeBlock CHOCOLATE_CAKE;
 	public static WatersCandleCakeBlock CHOCOLATE_CANDLE_CAKE;
@@ -103,5 +104,6 @@ public class RandomBlocks
 		PROJECT_TABLE = register("project_table", new ProjectTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
 		IGNITER = register("igniter", new IgniterBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER).mapColor(MapColor.RED)));
 		ANIMATED_JUKEBOX = register("animated_jukebox", new AnimatedJukeboxBlock(FabricBlockSettings.copyOf(Blocks.JUKEBOX)));
+		CORN_CROP = register("corn", new CornBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 	}
 }

@@ -1,0 +1,40 @@
+{
+	"variants": {
+		"half=bottom,age=0": {
+			"model": "watersrandom:block/corn_age_1"
+		},
+		"half=bottom,age=1": {
+			"model": "watersrandom:block/corn_age_1"
+		},
+		"half=bottom,age=2": {
+			"model": "watersrandom:block/corn_age_2"
+		},
+		"half=bottom,age=3": {
+			"model": "watersrandom:block/corn_age_3"
+		},
+		"half=bottom,age=4": {
+			"model": "watersrandom:block/corn_age_4"
+		},
+		"half=bottom,age=5": {
+			"model": "watersrandom:block/corn_age_5_bottom"
+		},
+		"half=top,age=0": {
+			"model": "watersrandom:block/corn_age_1"
+		},
+		"half=top,age=1": {
+			"model": "watersrandom:block/corn_age_1"
+		},
+		"half=top,age=2": {
+			"model": "watersrandom:block/corn_age_2"
+		},
+		"half=top,age=3": {
+			"model": "watersrandom:block/corn_age_3"
+		},
+		"half=top,age=4": {
+			"model": "watersrandom:block/corn_age_4"
+		},
+		"half=top,age=5": {
+			"model": "watersrandom:block/corn_age_5_top"
+		}
+	}
+}

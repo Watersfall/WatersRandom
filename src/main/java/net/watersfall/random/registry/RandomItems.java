@@ -51,6 +51,12 @@ public class RandomItems
 	public static Item FIRE_MELON_SEEDS;
 	public static Item EARTH_MELON_SEEDS;
 
+	public static Item CORN_SEED;
+	public static Item CORN_ON_THE_COB;
+	public static Item GRILLED_CORN;
+	public static Item POPCORN;
+	public static Item BUTTERED_CORN;
+
 	public static Item COAL_PIECE;
 	public static Item CHARCOAL_PIECE;
 
@@ -137,9 +143,14 @@ public class RandomItems
 		AIR_MELON_SEEDS = register("air_melon_seeds", new AliasedBlockItem(RandomBlocks.AIR_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 		FIRE_MELON_SEEDS = register("fire_melon_seeds", new AliasedBlockItem(RandomBlocks.FIRE_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 		EARTH_MELON_SEEDS = register("earth_melon_seeds", new AliasedBlockItem(RandomBlocks.EARTH_MELON_STEM, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+		CORN_SEED = register("corn_seeds", new AliasedBlockItem(RandomBlocks.CORN_CROP, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 		AIR_MELON = register("air_melon", new MelonItem(StatusEffects.JUMP_BOOST, StatusEffects.LEVITATION, AIR_MELON_SEEDS));
 		FIRE_MELON = register("fire_melon", new FireMelonItem());
 		EARTH_MELON = register("earth_melon", new MelonItem(StatusEffects.STRENGTH, StatusEffects.SLOWNESS, EARTH_MELON_SEEDS));
+		CORN_ON_THE_COB = register("corn_on_the_cob", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.POTATO)));
+		GRILLED_CORN = register("grilled_corn", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.BAKED_POTATO)));
+		POPCORN = register("popcorn", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.MELON_SLICE)));
+		BUTTERED_CORN = register("buttered_corn", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.COOKED_BEEF)));
 		PROJECT_TABLE_BLOCK = registerProjectTable();
 		TINY_CHEST = register(RandomBlocks.TINY_CHEST, ItemGroup.DECORATIONS);
 		CHOCOLATE = register("chocolate", new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(FoodComponents.MELON_SLICE)));

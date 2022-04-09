@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smoking",
+	"ingredient": {
+		"item": "watersrandom:corn_seeds"
+	},
+	"result": "watersrandom:popcorn",
+	"experience": 0.35,
+	"cookingtime": 100
+}

@@ -118,6 +118,16 @@ public class WatersRandom implements ModInitializer
 						);
 				supplier.withPool(pool.build());
 			}
+			else if(id.equals(LootTables.SIMPLE_DUNGEON_CHEST))
+			{
+				FabricLootPoolBuilder pool = FabricLootPoolBuilder.builder()
+						.rolls(UniformLootNumberProvider.create(0, 16))
+						.withEntry(ItemEntry.builder(RandomItems.CORN_SEED)
+								.conditionally(RandomChanceLootCondition.builder(0.33F))
+								.build()
+						);
+				supplier.withPool(pool.build());
+			}
 			else if(id.getPath().startsWith("entities/"))
 			{
 				String[] path = id.getPath().split("/");

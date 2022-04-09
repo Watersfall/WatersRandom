@@ -59,7 +59,7 @@ public class WatersRandomClient implements ClientModInitializer
 	@Override
 	public void onInitializeClient()
 	{
-		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RandomBlocks.DRAWBRIDGE, RandomBlocks.PROJECT_TABLE, RandomBlocks.IGNITER);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), RandomBlocks.DRAWBRIDGE, RandomBlocks.PROJECT_TABLE, RandomBlocks.IGNITER, RandomBlocks.CORN_CROP);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.DRAWBRIDGE, DrawbridgeBlockRenderer::new);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.TINY_CHEST, TinyChestBlockRenderer::new);
 		BlockEntityRendererRegistry.register(RandomBlockEntities.PROJECT_TABLE, ProjectTableBlockRenderer::new);
