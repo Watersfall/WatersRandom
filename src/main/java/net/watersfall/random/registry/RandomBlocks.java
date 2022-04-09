@@ -51,6 +51,8 @@ public class RandomBlocks
 
 	public static ProjectTableBlock PROJECT_TABLE;
 
+	public static IgniterBlock IGNITER;
+
 
 	private static <T extends Block> T register(String name, T block)
 	{
@@ -98,5 +100,6 @@ public class RandomBlocks
 		CHOCOLATE_RED_CANDLE_CAKE = register("chocolate_red_candle_cake", new WatersCandleCakeBlock(Blocks.RED_CANDLE, FabricBlockSettings.copyOf(Blocks.RED_CANDLE_CAKE)));
 		CHOCOLATE_BLACK_CANDLE_CAKE = register("chocolate_black_candle_cake", new WatersCandleCakeBlock(Blocks.BLACK_CANDLE, FabricBlockSettings.copyOf(Blocks.BLACK_CANDLE_CAKE)));
 		PROJECT_TABLE = register("project_table", new ProjectTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
+		IGNITER = register("igniter", new IgniterBlock(FabricBlockSettings.copyOf(Blocks.DISPENSER).mapColor(MapColor.RED)));
 	}
 }

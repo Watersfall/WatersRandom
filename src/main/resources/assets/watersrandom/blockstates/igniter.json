@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "watersrandom:block/igniter"
+		},
+		"facing=south": {
+			"model": "watersrandom:block/igniter",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "watersrandom:block/igniter",
+			"y": 270
+		},
+		"facing=east": {
+			"model": "watersrandom:block/igniter",
+			"y": 90
+		}
+	}
+}

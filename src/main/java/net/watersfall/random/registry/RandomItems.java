@@ -22,6 +22,9 @@ public class RandomItems
 	public static BlockItem EARTH_MELON_BLOCK;
 
 	public static BlockItem DRAWBRIDGE;
+
+	public static BlockItem IGNITER;
+
 	public static BlockItem CHARCOAL_BLOCK;
 	
 	public static BlockItem MOSSY_PRESSURE_PLATE;
@@ -118,6 +121,7 @@ public class RandomItems
 		FIRE_MELON_BLOCK = register(RandomBlocks.FIRE_MELON, ItemGroup.BUILDING_BLOCKS);
 		EARTH_MELON_BLOCK = register(RandomBlocks.EARTH_MELON, ItemGroup.BUILDING_BLOCKS);
 		DRAWBRIDGE = register(RandomBlocks.DRAWBRIDGE, ItemGroup.REDSTONE);
+		IGNITER = register(RandomBlocks.IGNITER, ItemGroup.REDSTONE);
 		CHARCOAL_BLOCK = register(RandomBlocks.CHARCOAL_BLOCK, ItemGroup.BUILDING_BLOCKS);
 		MOSSY_PRESSURE_PLATE = register(RandomBlocks.MOSSY_PRESSURE_PLATE, ItemGroup.REDSTONE);
 		MOSSY_PRESSURE_PLATE_SILENT = register(RandomBlocks.MOSSY_PRESSURE_PLATE_SILENT, ItemGroup.REDSTONE);

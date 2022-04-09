@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"nnn",
+		"nfr",
+		"nnn"
+	],
+	"key": {
+		"n": {
+			"item": "minecraft:netherrack"
+		},
+		"f": {
+			"item": "minecraft:flint_and_steel"
+		},
+		"r": {
+			"item": "minecraft:redstone"
+		}
+	},
+	"result": {
+		"item": "watersrandom:igniter"
+	}
+}

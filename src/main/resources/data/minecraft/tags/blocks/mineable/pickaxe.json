@@ -2,6 +2,7 @@
 	"replace": false,
 	"values": [
 		"watersrandom:drawbridge",
+		"watersrandom:igniter",
 		"watersrandom:charcoal_block",
 		"watersrandom:mossy_pressure_plate",
 		"watersrandom:mossy_pressure_plate_silent",

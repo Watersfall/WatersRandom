@@ -1,0 +1,37 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "watersrandom:block/igniter_front",
+		"1": "watersrandom:block/igniter_side",
+		"2": "watersrandom:block/igniter_horizontal",
+		"n": "minecraft:block/netherrack",
+		"particle": "watersrandom:block/igniter_front"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#n"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#n"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#n"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#n"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#n"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#n"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		}
+	]
+}
