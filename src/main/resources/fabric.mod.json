@@ -18,9 +18,8 @@
 		"random.client.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.12.1",
-		"minecraft": ">=1.18",
-		"wet": ">=0.1.0",
-		"fabric": ">=0.40.6"
+		"fabricloader": ">=0.13.0",
+		"minecraft": ">=1.18.2",
+		"fabric": ">=0.48.0"
 	}
 }

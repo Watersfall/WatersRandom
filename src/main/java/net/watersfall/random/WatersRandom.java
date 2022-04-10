@@ -27,14 +27,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.watersfall.random.ability.WoodArmorAbilityImpl;
-import net.watersfall.random.api.ability.WoodArmorAbility;
-import net.watersfall.random.compat.tools.ToolsCompat;
 import net.watersfall.random.item.RailgunItem;
 import net.watersfall.random.mixin.accessor.MobSpawnerLogicAccessor;
 import net.watersfall.random.registry.*;
-import net.watersfall.wet.api.abilities.AbilityProvider;
-import net.watersfall.wet.api.event.AbilityCreateEvent;
 
 import java.util.Optional;
 
@@ -47,17 +42,6 @@ public class WatersRandom implements ModInitializer
 	public static Identifier getId(String name)
 	{
 		return new Identifier(MODID, name);
-	}
-
-	private void registerAbilities()
-	{
-		AbilityProvider.ITEM_REGISTRY.register(WoodArmorAbility.ID, WoodArmorAbilityImpl::new);
-		AbilityCreateEvent.ITEM.register(((item, provider) -> {
-			if(item == RandomItems.OAK_WOOD_BOOTS || item == RandomItems.OAK_WOOD_HELMET)
-			{
-				provider.addAbility(new WoodArmorAbilityImpl());
-			}
-		}));
 	}
 
 	private void registerEvents()
@@ -156,12 +140,10 @@ public class WatersRandom implements ModInitializer
 		RandomEntities.register();
 		RandomRecipes.register();
 		RailgunItem.registerAmmo();
-		registerAbilities();
 		registerEvents();
 		RandomConfiguredFeatures.register();
 		RandomPlacedFeatures.register();
 		registerBiomeModifications();
 		registerLootModifications();
-		ToolsCompat.INSTANCE.load(FabricLoader.getInstance().isModLoaded("tools"));
 	}
 }

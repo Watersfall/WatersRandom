@@ -8,11 +8,9 @@ import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
-import net.watersfall.random.ability.WoodArmorAbilityImpl;
-import net.watersfall.random.api.ability.WoodArmorAbility;
 import net.watersfall.random.registry.RandomRecipes;
-import net.watersfall.wet.api.abilities.AbilityProvider;
 
 public class WoodArmorRecipe implements CraftingRecipe
 {
@@ -52,13 +50,12 @@ public class WoodArmorRecipe implements CraftingRecipe
 	public ItemStack craft(CraftingInventory inventory)
 	{
 		ItemStack stack = recipe.craft(inventory);
-		AbilityProvider<ItemStack> provider = AbilityProvider.getProvider(stack);
 		for(int i = 0; i < inventory.size(); i++)
 		{
 			if(!inventory.getStack(i).isEmpty())
 			{
-				WoodArmorAbility ability = new WoodArmorAbilityImpl(inventory.getStack(i).copy());
-				provider.addAbility(ability);
+				Identifier id = Registry.ITEM.getId(inventory.getStack(i).getItem());
+				stack.getOrCreateNbt().putString("type", id.toString());
 				break;
 			}
 		}

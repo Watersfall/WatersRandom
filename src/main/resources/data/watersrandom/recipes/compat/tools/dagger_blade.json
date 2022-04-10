@@ -1,6 +1,0 @@
-{
-	"required_mod": "tools",
-	"type": "tools:component_recipe",
-	"material_cost": 1,
-	"output": "watersrandom:dagger_blade"
-}

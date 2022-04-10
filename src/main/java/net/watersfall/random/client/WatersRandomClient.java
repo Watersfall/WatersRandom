@@ -22,15 +22,16 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
-import net.watersfall.random.api.ability.WoodArmorAbility;
 import net.watersfall.random.block.entity.ProjectTableBlockEntity;
 import net.watersfall.random.block.entity.TinyChestBlockEntity;
 import net.watersfall.random.client.gui.DrawbridgeScreen;
@@ -38,14 +39,11 @@ import net.watersfall.random.client.gui.ProjectTableScreen;
 import net.watersfall.random.client.gui.TinyChestScreen;
 import net.watersfall.random.client.renderer.block.*;
 import net.watersfall.random.client.renderer.entity.RailgunBulletEntityRenderer;
-import net.watersfall.random.compat.tools.ToolsCompat;
 import net.watersfall.random.entity.RailgunBulletEntity;
 import net.watersfall.random.item.RailgunItem;
 import net.watersfall.random.item.material.RandomArmorMaterials;
 import net.watersfall.random.registry.*;
-import net.watersfall.wet.api.abilities.AbilityProvider;
 
-import java.util.Optional;
 import java.util.Random;
 import java.util.UUID;
 
@@ -66,7 +64,6 @@ public class WatersRandomClient implements ClientModInitializer
 		ScreenRegistry.register(RandomScreenHandlers.DRAWBRIDGE, DrawbridgeScreen::new);
 		ScreenRegistry.register(RandomScreenHandlers.TINY_CHEST, TinyChestScreen::new);
 		ScreenRegistry.register(RandomScreenHandlers.PROJECT_TABLE, ProjectTableScreen::new);
-		ToolsCompat.INSTANCE.loadClient(FabricLoader.getInstance().isModLoaded("tools"));
 
 		EntityRendererRegistry.register(RandomEntities.RAILGUN_BULLET, RailgunBulletEntityRenderer::new);
 		EntityRendererRegistry.register(RandomEntities.SONIC_ARROW, ArrowEntityRenderer::new);
@@ -99,10 +96,14 @@ public class WatersRandomClient implements ClientModInitializer
 				{
 					armorModel.setVisible(false);
 					ItemStack log = Items.OAK_LOG.getDefaultStack();
-					Optional<WoodArmorAbility> optional = AbilityProvider.getAbility(stack, WoodArmorAbility.ID, WoodArmorAbility.class);
-					if(optional.isPresent())
+					if(stack.hasNbt() && stack.getNbt().contains("type"))
 					{
-						log = optional.get().getStack();
+						Identifier id = Identifier.tryParse(stack.getNbt().getString("type"));
+						Item check = Registry.ITEM.get(id);
+						if(check != Items.AIR)
+						{
+							log = check.getDefaultStack();
+						}
 					}
 					if(slot == EquipmentSlot.HEAD)
 					{
