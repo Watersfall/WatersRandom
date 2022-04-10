@@ -85,6 +85,8 @@ public class RandomItems
 	public static WoodArmorItem OAK_WOOD_HELMET;
 	public static WoodArmorItem OAK_WOOD_BOOTS;
 
+	public static HorseArmorItem GILDED_HORSE_ARMOR;
+
 	public static Item CHOCOLATE;
 
 	public static List<ArmorItem> ARMORS = new ArrayList<>();
@@ -177,6 +179,7 @@ public class RandomItems
 		OAK_WOOD_HELMET = register("wood_helmet", EquipmentSlot.HEAD);
 		OAK_WOOD_BOOTS = register("wood_boots", EquipmentSlot.FEET);
 		SONIC_ARROW = register("sonic_arrow", new SonicArrowItem(new FabricItemSettings().group(ItemGroup.COMBAT)));
+		GILDED_HORSE_ARMOR = register("gilded_horse_armor", new GildedHorseArmorItem(9, "gilded", new FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT)));
 
 		FuelRegistry.INSTANCE.add(COAL_PIECE, 200);
 		FuelRegistry.INSTANCE.add(CHARCOAL_PIECE, 200);

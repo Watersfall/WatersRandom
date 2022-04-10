@@ -4,7 +4,7 @@
 	"package": "net.watersfall.random.mixin",
 	"compatibilityLevel": "JAVA_16",
 	"mixins": [
-		"ArrowItemMixin", "LivingEntityMixin", "MusicDiscItemMixin", "PiglinBrainMixin",
+		"ArrowItemMixin", "BrewingStandBlockEntityMixin", "LivingEntityMixin", "MusicDiscItemMixin", "PiglinBrainMixin",
 		"accessor.MobSpawnerLogicAccessor"
 	],
 	"client": [

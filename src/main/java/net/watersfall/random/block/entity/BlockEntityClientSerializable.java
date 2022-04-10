@@ -7,6 +7,13 @@ import net.minecraft.world.World;
 
 public interface BlockEntityClientSerializable
 {
+	public static void sync(BlockEntity blockEntity)
+	{
+		World world = blockEntity.getWorld();
+		if (!(world instanceof ServerWorld)) throw new IllegalStateException("Cannot call sync() on the logical client! Did you check world.isClient first?");
+		((ServerWorld) world).getChunkManager().markForUpdate((blockEntity).getPos());
+	}
+
 	NbtCompound toClientTag(NbtCompound nbt);
 
 	void fromClientTag(NbtCompound nbt);
