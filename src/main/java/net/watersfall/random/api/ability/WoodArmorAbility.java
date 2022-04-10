@@ -3,7 +3,6 @@ package net.watersfall.random.api.ability;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.watersfall.random.WatersRandom;
-import net.watersfall.random.client.WatersRandomClient;
 import net.watersfall.wet.api.abilities.Ability;
 
 public interface WoodArmorAbility extends Ability<ItemStack>

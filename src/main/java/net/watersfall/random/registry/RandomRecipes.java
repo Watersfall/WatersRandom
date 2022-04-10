@@ -1,6 +1,5 @@
 package net.watersfall.random.registry;
 
-import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.util.registry.Registry;
 import net.watersfall.random.WatersRandom;
 import net.watersfall.random.recipe.ProjectTableRecipe;

@@ -1,6 +1,5 @@
 package net.watersfall.random.item.material;
 
-import net.minecraft.client.sound.Sound;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;

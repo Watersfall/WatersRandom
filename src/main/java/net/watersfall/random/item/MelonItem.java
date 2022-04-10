@@ -10,7 +10,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.watersfall.random.registry.RandomItems;
 
 public class MelonItem extends Item
 {

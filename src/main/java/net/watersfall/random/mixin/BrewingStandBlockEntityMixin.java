@@ -55,6 +55,10 @@ public abstract class BrewingStandBlockEntityMixin extends BlockEntity
 	@Inject(method = "craft", at = @At("TAIL"))
 	private static void watersrandom$syncBrewingStandOnCraft(World world, BlockPos pos, DefaultedList<ItemStack> slots, CallbackInfo ci)
 	{
-		BlockEntityClientSerializable.sync(world.getBlockEntity(pos));
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if(blockEntity != null)
+		{
+			BlockEntityClientSerializable.sync(blockEntity);
+		}
 	}
 }

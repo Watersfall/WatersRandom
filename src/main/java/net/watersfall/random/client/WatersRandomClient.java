@@ -142,7 +142,7 @@ public class WatersRandomClient implements ClientModInitializer
 					ArmorRenderer.renderPart(matrices, vertexConsumers, light, stack, armorModel, WatersRandom.getId("textures/models/armor/" + item.getMaterial().getName() + "_layer_1.png"));
 				}
 			}
-		}), RandomItems.ARMORS.toArray(new ArmorItem[RandomItems.ARMORS.size()]));
+		}), RandomItems.ARMORS.toArray(new ArmorItem[0]));
 
 		ClientPlayNetworking.registerGlobalReceiver(WatersRandom.getId("spawn_packet"), (client, handler, buf, response) -> {
 			EntityType<?> type = Registry.ENTITY_TYPE.get(buf.readVarInt());

@@ -1,21 +1,11 @@
 package net.watersfall.random.registry;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.Vec3i;
-import net.minecraft.util.math.VerticalSurfaceType;
-import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-import net.watersfall.random.WatersRandom;
-
-import java.util.List;
-import java.util.Set;
 
 public abstract class RandomConfiguredFeatures extends ConfiguredFeatures
 {

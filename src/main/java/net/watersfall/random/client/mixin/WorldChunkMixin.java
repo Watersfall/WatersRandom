@@ -6,7 +6,6 @@ import net.minecraft.world.chunk.WorldChunk;
 import net.watersfall.random.block.entity.BlockEntityClientSerializable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(WorldChunk.class)

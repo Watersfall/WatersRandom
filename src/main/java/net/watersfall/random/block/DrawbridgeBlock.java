@@ -4,7 +4,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.BlockItem;
@@ -15,7 +14,6 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -27,11 +25,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.watersfall.random.WatersRandom;
 import net.watersfall.random.block.entity.DrawbridgeBlockEntity;
 import net.watersfall.random.gui.DrawbridgeHandler;
 import net.watersfall.random.registry.RandomBlockEntities;
-import net.watersfall.random.registry.RandomBlocks;
 import net.watersfall.random.registry.RandomItems;
 
 public class DrawbridgeBlock extends FacingBlock implements BlockEntityProvider
